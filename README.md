@@ -4,8 +4,8 @@ A personal portfolio website with a dark, gothic aesthetic, designed to evoke a 
 
 ## Images
 
-![Landscape view.](/assets/landscape.gif "This is a landscape view of the website.")
-![Portrait view.](/assets/portrait.gif "This is a portrait view of the website.")
+![Landscape view.](/src/assets/landscape.gif "This is a landscape view of the website.")
+![Portrait view.](/src/assets/portrait.gif "This is a portrait view of the website.")
 
 [Deployed Version](https://markdownlivepreview.com/)
 
