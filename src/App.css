@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+
+@import "tailwindcss";
+@import "./index.css";
+
+@layer base {
+  body {
+    @apply bg-gothic-black text-gothic-silver font-Crimson;
+    background-image: radial-gradient(
+        circle at 50% 50%,
+        rgba(27, 27, 50, 0.2) 0%,
+        transparent 100%
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(10, 10, 15, 0.9) 0%,
+        rgba(10, 10, 15, 1) 100%
+      );
+  }
+}
+
+@layer components {
+  .gothic-frame {
+    @apply relative border-2 border-gothic-gold/30 p-6;
+    &::before,
+    &::after {
+      @apply content-[''] absolute w-4 h-4 border-gothic-gold/50;
+    }
+    &::before {
+      @apply top-0 left-0 border-t-2 border-l-2;
+    }
+    &::after {
+      @apply bottom-0 right-0 border-b-2 border-r-2;
+    }
+  }
+
+  .mist-overlay {
+    @apply fixed inset-0 pointer-events-none opacity-30;
+    background-image: url("https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?auto=format&fit=crop&w=2000&q=80");
+    background-size: cover;
+    mix-blend-mode: screen;
+  }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 2s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
